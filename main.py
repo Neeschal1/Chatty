@@ -13,14 +13,14 @@ st.title("Hello, World!")
 st.text("Welcome to Chatty :)")
 
 engine = pyttsx3.init()
-# terminated_response = "Byebye. Take Care. See you soon :) \n"
+terminated_response = "Byebye. Take Care. See you soon :) \n"
 
 def decide():
     decision = int(input('''\nPress 1 to continue, and press 2 to terminate the program: '''))
     func(decision)
 
 def loop():
-    # user_input = input("\nEnter anything: ")
+    user_input = input("\nEnter anything: ")
     user_input = st.text_input("\nEnter anything: ")
     try: 
        response = model_of_AI.generate_content(user_input)
@@ -35,8 +35,8 @@ def func(x):
         loop()
         decide()
     else:
-        # engine.say(terminated_response)
-        # print(terminated_response)
+        engine.say(terminated_response)
+        print(terminated_response)
         engine.runAndWait()
         pass
     
