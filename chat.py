@@ -4,8 +4,6 @@ import streamlit as st
 import os
 import google.generativeai as genai 
 from dotenv import load_dotenv 
-import pyttsx3 
-engine = pyttsx3.init()
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
