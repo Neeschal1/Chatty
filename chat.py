@@ -1,7 +1,6 @@
 #output in web app through streamlit
 
 import streamlit as st
-import pyttsx3
 import os
 import google.generativeai as genai
 from dotenv import load_dotenv
@@ -15,7 +14,6 @@ model_of_AI = genai.GenerativeModel('gemini-2.5-flash')
 st.title("Hello, World!")
 st.text("Welcome to Chatty :)")
 
-engine = pyttsx3.init()
 
 def user():
     user_input = st.text_input("Enter anything to ask to Neeschal's AI:")
